@@ -1,0 +1,47 @@
+<ion-header padding class="loginheader">
+  <ion-toolbar>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Vivo Duoc Remake</ion-card-title>
+      </ion-card-header>
+    </ion-card>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="loginbackground">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+
+  </ion-header>
+
+  <h1 class="ion-text-center">
+
+  </h1>
+
+  <ion-card class="ion-text-center" color="loginbackground">
+    <ion-card-header>
+      <ion-card-title>
+        <h1 class="ion-text-center">
+          Bienvenido!
+        </h1>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input label="Usuario" placeholder="Usuario" [(ngModel)]="login.usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Contrasena" type="password" value="password" [(ngModel)]="login.password"></ion-input>
+      </ion-item>
+      <ion-button expand="block" (click)="ingresar()">Ingresar</ion-button>
+      <br>
+      <a href="#">
+        <p>Has olvidado tu contrasena?</p>
+      </a>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

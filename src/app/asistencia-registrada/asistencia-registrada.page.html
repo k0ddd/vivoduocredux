@@ -1,0 +1,73 @@
+<ion-header padding class="docenteheader">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>nombre_alumno</ion-card-title>
+      <ion-card-subtitle>Por reglamento académico tienes que tener un 70% de asistencia en cada uno de tus ramos para aprobar el curso, en esta sección podrás revisar el avance y así no repetir por no ir a clases.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Arquitectura</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title > Fecha                       Asistencia</ion-card-title>
+                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+              </ion-card-header>
+            
+              <ion-card-content>
+                Here's a small text description for the card content. Nothing more, nothing less.
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label>Programacion Aplicacion Web</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title > Fecha                       Asistencia</ion-card-title>
+                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+              </ion-card-header>
+            
+              <ion-card-content>
+                Here's a small text description for the card content. Nothing more, nothing less.
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label>Calidad de Software</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title > Fecha                       Asistencia</ion-card-title>
+                <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+              </ion-card-header>
+            
+              <ion-card-content>
+                Here's a small text description for the card content. Nothing more, nothing less.
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
