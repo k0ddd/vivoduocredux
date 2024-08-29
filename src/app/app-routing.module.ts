@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'pagina-docente',
+    redirectTo: 'recuperar-contrasena',
     pathMatch: 'full'
   },
   {

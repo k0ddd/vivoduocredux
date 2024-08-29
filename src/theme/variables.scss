@@ -1,8 +1,74 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
 
-:root{
-    --ion-background-color-rgb: 255,255,255;
+:root {
+	--ion-color-rosado: #FAC2EE;
+	--ion-color-rosado-rgb: 55,236,83;
+	--ion-color-rosado-contrast: #000000;
+	--ion-color-rosado-contrast-rgb: 0,0,0;
+	--ion-color-rosado-shade: #000000;
+	--ion-color-rosado-tint: #000000;
 }
 
-.ioncolorlogin {--ion-color-mycolor-rgb: 255,255,255;}
+.ion-color-rosado {
+	--ion-color-base: var(--ion-color-rosado);
+	--ion-color-base-rgb: var(--ion-color-rosado-rgb);
+	--ion-color-contrast: var(--ion-color-rosado-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-rosado-contrast-rgb);
+	--ion-color-shade: var(--ion-color-rosado-shade);
+	--ion-color-tint: var(--ion-color-rosado-tint);
+}
+
+:root {
+	--ion-color-verde: #C2FACE;
+	--ion-color-verde-rgb: 55,236,83;
+	--ion-color-verde-contrast: #000000;
+	--ion-color-verde-contrast-rgb: 0,0,0;
+	--ion-color-verde-shade: #000000;
+	--ion-color-verde-tint: #000000;
+}
+
+.ion-color-verde {
+	--ion-color-base: var(--ion-color-verde);
+	--ion-color-base-rgb: var(--ion-color-verde-rgb);
+	--ion-color-contrast: var(--ion-color-verde-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-verde-contrast-rgb);
+	--ion-color-shade: var(--ion-color-verde-shade);
+	--ion-color-tint: var(--ion-color-verde-tint);
+}
+
+:root {
+	--ion-color-amarillo: #EEFAC2;
+	--ion-color-amarillo-rgb: 105,187,123;
+	--ion-color-amarillo-contrast: #000000;
+	--ion-color-amarillo-contrast-rgb: 0,0,0;
+	--ion-color-amarillo-shade: #000000;
+	--ion-color-amarillo-tint: #000000;
+}
+
+.ion-color-amarillo {
+	--ion-color-base: var(--ion-color-amarillo);
+	--ion-color-base-rgb: var(--ion-color-amarillo-rgb);
+	--ion-color-contrast: var(--ion-color-amarillo-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-amarillo-contrast-rgb);
+	--ion-color-shade: var(--ion-color-amarillo-shade);
+	--ion-color-tint: var(--ion-color-amarillo-tint);
+}
+
+:root {
+	--ion-color-boton: #C2D2FA;
+	--ion-color-boton-rgb: 105,187,123;
+	--ion-color-boton-contrast: #000000;
+	--ion-color-boton-contrast-rgb: 0,0,0;
+	--ion-color-boton-shade: #ffffff;
+	--ion-color-boton-tint: #ffffff;
+}
+
+.ion-color-boton {
+	--ion-color-base: var(--ion-color-boton);
+	--ion-color-base-rgb: var(--ion-color-boton-rgb);
+	--ion-color-contrast: var(--ion-color-boton-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-boton-contrast-rgb);
+	--ion-color-shade: var(--ion-color-boton-shade);
+	--ion-color-tint: var(--ion-color-boton-tint);
+}

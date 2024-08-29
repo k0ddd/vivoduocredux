@@ -1,30 +1,15 @@
-<ion-header padding class="loginheader">
-  <ion-toolbar>
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title class="ion-text-center">Vivo Duoc Remake</ion-card-title>
-      </ion-card-header>
-    </ion-card>
+<ion-header class="padding-header">
+  <ion-toolbar color="verde">
+    <ion-title>VIVO DUOC REMAKE</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="loginbackground">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Login</ion-title>
-    </ion-toolbar>
-
-  </ion-header>
-
-  <h1 class="ion-text-center">
-
-  </h1>
-
-  <ion-card class="ion-text-center" color="loginbackground">
+<ion-content [fullscreen]="true" color="rosado">
+  <ion-card color="amarillo">
     <ion-card-header>
       <ion-card-title>
         <h1 class="ion-text-center">
-          Bienvenido!
+          ¡Bienvenido!
         </h1>
       </ion-card-title>
     </ion-card-header>
@@ -35,13 +20,18 @@
       <ion-item>
         <ion-input label="Contrasena" type="password" value="password" [(ngModel)]="login.password"></ion-input>
       </ion-item>
-      <ion-button expand="block" (click)="ingresar()">Ingresar</ion-button>
+      <ion-button expand="block" (click)="ingresar()"  color="boton">Ingresar</ion-button>
       <br>
       <a href="#">
-        <p>Has olvidado tu contrasena?</p>
+        <p class="ion-text-center">¿Has olvidado tu contrasena?</p>
       </a>
     </ion-card-content>
 
   </ion-card>
-
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="verde">
+    <ion-title>VIVO DUOC REMAKE</ion-title>
+  </ion-toolbar>
+</ion-footer>
