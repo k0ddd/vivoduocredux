@@ -1,22 +1,29 @@
 <ion-header class="padding-header-recuperarcontra">
   <ion-toolbar color="verde">
-    <ion-title>VIVO DUOC REMAKE</ion-title>
+    <ion-title class="ion-text-center">VIVO DUOC REMAKE</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>recuperarContrasena</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">recuperarContrasena</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="verde">
+  <ion-card color="amarillo">
+    <ion-card-header>
+      <ion-card-title>
+        <h1 class="ion-text-center">
+          Ingrese un correo para
+          <br>
+          recuperar su contraseña
+        </h1>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-input label="Correo" placeholder="Correo de recuperacion"></ion-input>
+      </ion-item>
+      <ion-button expand="block"  color="boton">Recuperar contraseña</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
 
 <ion-footer class="padding-footer-recuperarcontra">
   <ion-toolbar color="verde">
