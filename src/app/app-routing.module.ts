@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'recuperar-contrasena',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'asistencia-registrada',
     loadChildren: () => import('./asistencia-registrada/asistencia-registrada.module').then( m => m.AsistenciaRegistradaPageModule)
-  },  {
+  },
+  {
     path: 'codigoqr',
     loadChildren: () => import('./codigoqr/codigoqr.module').then( m => m.CodigoqrPageModule)
   },
