@@ -1,33 +1,35 @@
-<ion-header class="padding-header-login">
+<ion-header class="ion-padding-top ion-text-center">
   <ion-toolbar color="verde">
     <ion-title>VIVO DUOC REMAKE</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="rosado">
+
+
   <ion-card color="amarillo">
     <ion-card-header>
       <ion-card-title>
-        <h1 class="ion-text-center">
-          ¡Bienveanido!
-        </h1>
+        <h1 class="ion-text-center">¡Bienvenido!</h1>
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-input label="Usuario" placeholder="Usuario" [(ngModel)]="login.usuario"></ion-input>
+        <ion-label position="floating" name="usuario">Usuario</ion-label>
+        <ion-input typer="text" [(ngModel)]="login.usuario"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input label="Contrasena" type="password" value="password" [(ngModel)]="login.password"></ion-input>
+        <ion-label position="floating" name="password">Contraseña</ion-label>
+        <ion-input [(ngModel)]="login.password"></ion-input>
       </ion-item>
-      <ion-button expand="block" (click)="ingresar()"  color="boton">Ingresar</ion-button>
+      <ion-button expand="block" type="submit" color="boton">Ingresar</ion-button>
       <br>
       <a href="#">
-        <p class="ion-text-center">¿Has olvidado tu contrasena?</p>
+        <p class="ion-text-center">¿Has olvidado tu contraseña?</p>
       </a>
     </ion-card-content>
-
   </ion-card>
+
 </ion-content>
 
 <ion-footer class="padding-footer-login">
