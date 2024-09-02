@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NumericValueAccessor, ToastController } from '@ionic/angular';
+import { NavigationExtras, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,29 +9,49 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginPage implements OnInit {
 
-  login:any={
-    usuario:"",
-    pasword:""
+      login:any={
+      usuario:"",
+      pasword:""
   }
 
-  constructor() { }
+  field:string="";
+
+  constructor(public toastController: ToastController, private router:Router) { }
 
   ngOnInit() {
   }
 
   ingresar(){
-    console.log("estoy en el metodo ingresar")
-    console.log(this.login.usuario);
-    console.log(this.validarModel(this.login));
+    if(this.validateModel(this.login)){
+      this.presentToast("Bienvenido "+this.login.Usuario);
+      
+      let NavigationExtras:NavigationExtras={
+        state: {user:this.login.Usuario}
+      };
+      this.router.navigate(['home'], NavigationExtras);
+    } else {
+      this.presentToast("falta: "+this.field);
+   }
+   
   }
 
-  validarModel(model:any){
+  validateModel(model:any){
+    for (var [key, value] of Object.entries(model)){
+      if (value ==""){
+        this.field = key;
+        return false;
+      }
+    }
+    return true;
+  }
     
-    if (model.usuario==""){
-      return "usuario vacio";
-    }else if (model.password==""){
-      return "password vacio";
-    }else return "campos completos";
-  }
+    async presentToast(message:string, duration?:number){
+      const toast = await this.toastController.create({
+        message:message,
+        duration: duration ? duration : 2000
 
+      });
+    
+    }
 }
+

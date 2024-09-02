@@ -1,30 +1,32 @@
-<ion-header padding class="docenteheader">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="verde" class="padding-header-asistencia-registrada">
     <ion-title class="ion-text-center">Asistencia</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card>
+<ion-content [fullscreen]="true" color="rosado">
+  <ion-card color="amarillo">
     <ion-card-header>
-      <ion-card-title>nombre_alumno</ion-card-title>
-      <ion-card-subtitle>Por reglamento académico tienes que tener un 70% de asistencia en cada uno de tus ramos para aprobar el curso, en esta sección podrás revisar el avance y así no repetir por no ir a clases.</ion-card-subtitle>
+      <ion-card-subtitle>Por reglamento académico tienes que tener un 70% de asistencia en cada uno de tus ramos para
+        aprobar el curso, en esta sección podrás revisar el avance y así no repetir por no ir a
+        clases.</ion-card-subtitle>     
+        <ion-card-title class="ion-text-center">nombre_alumno</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content >
 
       <ion-accordion-group>
         <ion-accordion value="first">
           <ion-item slot="header" color="light">
             <ion-label>Arquitectura</ion-label>
           </ion-item>
-          <div class="ion-padding" slot="content">
+          <div class="ion-paddinx g" slot="content">
             <ion-card>
               <ion-card-header>
-                <ion-card-title > Fecha                       Asistencia</ion-card-title>
+                <ion-card-title> Fecha Asistencia</ion-card-title>
                 <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
               </ion-card-header>
-            
-              <ion-card-content>
+
+              <ion-card-content color="amarillo">
                 Here's a small text description for the card content. Nothing more, nothing less.
               </ion-card-content>
             </ion-card>
@@ -37,10 +39,10 @@
           <div class="ion-padding" slot="content">
             <ion-card>
               <ion-card-header>
-                <ion-card-title > Fecha                       Asistencia</ion-card-title>
+                <ion-card-title> Fecha Asistencia</ion-card-title>
                 <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
               </ion-card-header>
-            
+
               <ion-card-content>
                 Here's a small text description for the card content. Nothing more, nothing less.
               </ion-card-content>
@@ -54,10 +56,10 @@
           <div class="ion-padding" slot="content">
             <ion-card>
               <ion-card-header>
-                <ion-card-title > Fecha                       Asistencia</ion-card-title>
+                <ion-card-title> Fecha Asistencia</ion-card-title>
                 <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
               </ion-card-header>
-            
+
               <ion-card-content>
                 Here's a small text description for the card content. Nothing more, nothing less.
               </ion-card-content>
@@ -65,9 +67,13 @@
           </div>
         </ion-accordion>
       </ion-accordion-group>
-
-
     </ion-card-content>
   </ion-card>
 
 </ion-content>
+
+<ion-footer class="padding-footer-asustencia-registrada">
+  <ion-toolbar color="verde">
+    <ion-title class="ion-text-center">VIVO DUOC REMAKE</ion-title>
+  </ion-toolbar>
+</ion-footer>
