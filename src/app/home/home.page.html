@@ -1,11 +1,27 @@
 <ion-header class="padding-header-home">
   <ion-toolbar color="verde">
-    <ion-title class="ion-text-center">VIVO DUOC REMAKE</ion-title>
+    <ion-title class="ion-text-center">VIVO DUOC REMAKE
+
+      <ion-button id="popover-button">
+        <ion-icon name="person-circle-sharp"></ion-icon>
+      </ion-button>
+      <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item [button]="true" [detail]="false">Cerrar Sesion</ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-popover>
+      
+    </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="rosado">
-  <ion-card>
+  <ion-card color="amarillo">
     <ion-card-header>
       <ion-card-title class="ion-text-center">Bienvenido nombre_usuario</ion-card-title>
     </ion-card-header>
