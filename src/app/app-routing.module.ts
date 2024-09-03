@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
     path: 'pagina-docente',
     loadChildren: () => import('./pagina-docente/pagina-docente.module').then( m => m.PaginaDocentePageModule)
   },
@@ -43,6 +47,7 @@ const routes: Routes = [
     path: 'camara-alumno',
     loadChildren: () => import('./camara-alumno/camara-alumno.module').then( m => m.CamaraAlumnoPageModule)
   },
+  
 
 ];
 
