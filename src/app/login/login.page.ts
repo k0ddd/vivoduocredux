@@ -11,7 +11,7 @@ export class LoginPage implements OnInit {
 
       login:any={
       usuario:"",
-      pasword:""
+      password:""
   }
 
   field:string="";
@@ -22,21 +22,22 @@ export class LoginPage implements OnInit {
   }
 
   ingresar(){
+  
     if(this.validateModel(this.login)){
-      if (this.validateLongUsuario(this.login.Usuario)){
-        if(this.validateLongPass(this.login.Password)){
-          this.presentToast("Bienvenido "+this.login.Usuario);
+      if (this.validateLongUsuario(this.login.usuario)){
+        if(this.validateLongPass(this.login.password)){
+          this.presentToast("Bienvenido "+this.login.usuario);
           let navigationExtras:NavigationExtras={
-            state: {user:this.login.Usuario} 
+            state: {user:this.login.usuario} 
           }
           this.router.navigate(['home'],navigationExtras);
         }else{
           this.presentToast("La contraseña debe ser de largo 4 y solo numerica");
-          this.login.Password="";
+          this.login.password="";
         }
       }else{
         this.presentToast("El largo del usuario debe ser entre 3 y 8 caracteres");
-        this.login.Usuario="";
+        this.login.usuario="";
       }
     }
     else{
@@ -48,6 +49,7 @@ export class LoginPage implements OnInit {
     // Recorro todas las entradas que me entrega Object entries y obtengo su clave, valor
     for (var [key, value] of Object.entries(model)) {
       // Si un valor es "" se retornara false y se avisara de lo faltante
+
       if (value=="") {
         // Se asigna el campo faltante
         this.field=key;
@@ -58,14 +60,14 @@ export class LoginPage implements OnInit {
     return true;
   }
 
-  validateLongUsuario(dato:String){
+  validateLongUsuario(dato:string){
     if(dato.length>=3 && dato.length<=8){
       return true
     }
     return false;
   }
-  validateLongPass(dato:String){
-    if(dato.length==4 && Number.isInteger(Number(dato))){
+  validateLongPass(dato:string){
+    if(dato.length>=3 && dato.length<=8){
       return true;
     }
     return false;
