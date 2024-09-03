@@ -1,5 +1,8 @@
 <ion-header class="padding-header-recuperarcontra">
   <ion-toolbar color="verde">
+    <ion-buttons slot="start">  
+      <ion-back-button default-href="login"></ion-back-button>
+    </ion-buttons>
     <ion-title class="ion-text-center">VIVO DUOC REMAKE</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -19,7 +22,7 @@
       <ion-item>
         <ion-input label="Correo" placeholder="Correo de recuperacion"></ion-input>
       </ion-item>
-      <ion-button expand="block"  color="boton">Recuperar contraseña</ion-button>
+      <ion-button (click)="presentAlert()" expand="block"  color="boton">Recuperar contraseña</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

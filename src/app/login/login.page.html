@@ -1,12 +1,10 @@
-<ion-header class="ion-padding-top ion-text-center">
+<ion-header class="padding-header-login">
   <ion-toolbar color="verde">
     <ion-title>VIVO DUOC REMAKE</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="rosado">
-
-
   <ion-card color="amarillo">
     <ion-card-header>
       <ion-card-title>
@@ -17,18 +15,16 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-label position="floating" name="usuario">Usuario</ion-label>
+        <ion-label position="floating" >Usuario</ion-label>
         <ion-input typer="text" [(ngModel)]="login.usuario"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label position="floating" name="password">Contraseña</ion-label>
-        <ion-input [(ngModel)]="login.password"></ion-input>
+        <ion-label position="floating" >Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="login.password"></ion-input>
       </ion-item>
-      <ion-button expand="block" type="submit" color="boton">Ingresar</ion-button>
+      <ion-button expand="block" type="submit" color="boton" (click)="ingresar()">Ingresar</ion-button>
       <br>
-      <a href="#">
-        <p class="ion-text-center">¿Has olvidado tu contraseña?</p>
-      </a>
+      <ion-button color="boton" [routerLink]="['/recuperar-contrasena']">¿HAS OLVIDADO TU CONTRASEÑA?</ion-button>
     </ion-card-content>
   </ion-card>
 
