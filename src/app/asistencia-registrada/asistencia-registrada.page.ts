@@ -1,4 +1,6 @@
   import { Component, OnInit } from '@angular/core';
+  import { Router } from '@angular/router';
+  import { AlertController } from '@ionic/angular';
 
   @Component({
     selector: 'app-asistencia-registrada',
@@ -8,8 +10,9 @@
   export class AsistenciaRegistradaPage implements OnInit {
     fecha: string = '';
     hora: string = '';
+    usuario: string = '';
     
-    constructor() { }
+    constructor(private router: Router) { }
 
     ngOnInit() {
       const now = new Date();
@@ -20,6 +23,16 @@
       this.fecha = localDate.toISOString().slice(0, 10); 
 
       this.hora = localDate.toISOString().slice(11, 16)
+
+
+      const navigation = this.router.getCurrentNavigation();
+      if (navigation && navigation.extras.state) {
+        const state = navigation.extras.state as { user: string };
+        this.usuario = state.user || 'Usuario no encontrado';
+      }
+
+
+
     }
 
   }

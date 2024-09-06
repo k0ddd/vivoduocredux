@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class HomePage implements OnInit {
   usuario: string = '';
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, public alertaSalida: AlertController) { }
 
   ngOnInit() {
     const navigation = this.router.getCurrentNavigation();
@@ -36,7 +37,16 @@ export class HomePage implements OnInit {
     };
     this.router.navigate(['/pagina-docente'], navigationExtras);
   }
+  
 
+  async presentAlert(){
+    const alert = await this.alertaSalida.create({
+      header: 'USTED HA CERRADO SESION',
+      message: 'Para volver a iniciar sesion reingrese sus credenciales',
+      buttons: ['OK']
+    });
+    await alert.present();
+}
 }
 
 

@@ -16,8 +16,21 @@ export class AlumnoPage implements OnInit {
     if (navigation && navigation.extras.state) {
       const state = navigation.extras.state as { user: string };
       this.usuario = state.user || 'Usuario no encontrado';
-    } else {
-      this.usuario = 'Usuario no encontrado';
     }
   }
+
+  goToAsistencia() {
+    const navigationExtras = {
+      state: {
+        user: this.usuario
+      }
+    };
+    this.router.navigate(['/asistencia-registrada'], navigationExtras);
+  }
+
+
+
+
+
+
 }

@@ -4,8 +4,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="rosado">
-  <ion-card color="amarillo">
+<ion-content [fullscreen]="true" color="rosado" >
+  <ion-card color="amarillo" >
     <ion-card-header>
       <ion-card-title>
         <h1 class="ion-text-center">
@@ -20,7 +20,10 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating" >Contraseña</ion-label>
-        <ion-input type="password" [(ngModel)]="login.password"></ion-input>
+        <ion-input type="password" [(ngModel)]="login.password">
+        <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+        
       </ion-item>
       <ion-button expand="block" color="boton" (click)="ingresar()">Ingresar</ion-button>
       <br>
@@ -28,8 +31,13 @@
     </ion-card-content>
   </ion-card>
 
-  
+    <ion-img class="img"
+    src="https://gundam.fandom.com/es/wiki/Tekkadan?file=Tekkadan_logo.png"
+    alt=""
+    ></ion-img>
 </ion-content>
+
+
 
 <ion-footer class="padding-footer-login">
   <ion-toolbar color="verde">

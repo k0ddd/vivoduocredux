@@ -1,5 +1,8 @@
-<ion-header>
-  <ion-toolbar color="verde" class="padding-header-asistencia-registrada">
+<ion-header class="padding-header-asistencia-registrada">
+  <ion-toolbar color="verde" >
+    <ion-buttons slot="start">  
+      <ion-back-button default-href="alumno"></ion-back-button>
+    </ion-buttons>
     <ion-title class="ion-text-center">Asistencia</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,15 +10,23 @@
 <ion-content [fullscreen]="true" color="rosado">
   <ion-card color="amarillo">
     <ion-card-header>
-      <ion-card-subtitle>Por reglamento académico tienes que tener un 70% de asistencia en cada uno de tus ramos para
+      <h5 class="texto-asistencia">Por reglamento académico tienes que tener un 70% de Asistencia en cada uno de tus ramos para
         aprobar el curso, en esta sección podrás revisar el avance y así no repetir por no ir a
-        clases.</ion-card-subtitle>     
-        <ion-card-title class="ion-text-center">nombre_alumno</ion-card-title>
+        clases.</h5>    
+        <ion-card-title class="ion-text-center">{{usuario}}</ion-card-title>
     </ion-card-header>
     <ion-card-content >
-      {{ fecha }}
+
+    </ion-card-content>
+  </ion-card>
+  <ion-card color="boton">
+    <ion-card-header>
+        <ion-card-title class="ion-text-center">FECHA ASISTENCIA</ion-card-title>
+    </ion-card-header>
+    <ion-card-content >
+      <h2 class="">FECHA: {{ fecha }}</h2>
       <br>
-      {{ hora }}
+      <h2>HORA: {{ hora }}</h2>
     </ion-card-content>
   </ion-card>
 
