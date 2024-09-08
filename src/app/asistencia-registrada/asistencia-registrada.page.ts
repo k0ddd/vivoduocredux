@@ -16,7 +16,7 @@
 
     ngOnInit() {
       const now = new Date();
-      const utcOffset = -4; 
+      const utcOffset = -3; 
       const localDate = new Date(now.getTime() + (utcOffset * 60 * 60 * 1000));
 
 
