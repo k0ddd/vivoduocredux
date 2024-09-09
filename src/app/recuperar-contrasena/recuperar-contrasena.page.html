@@ -20,9 +20,9 @@
     </ion-card-header>
     <ion-card-content>
       <ion-item>
-        <ion-input label="Correo" placeholder="Correo de recuperacion"></ion-input>
+        <ion-input [(ngModel)]="Correo" type="email" placeholder="Ingrese correo"></ion-input>
       </ion-item>
-      <ion-button (click)="presentAlert()" expand="block"  color="boton">Recuperar contraseña</ion-button>
+      <ion-button (click)="enviarCorreo()" expand="full"  color="boton">Recuperar contraseña</ion-button>
     </ion-card-content>
   </ion-card>
 </ion-content>

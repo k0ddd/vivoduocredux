@@ -9,12 +9,25 @@ import { AlertController } from '@ionic/angular';
 })
 export class RecuperarContrasenaPage implements OnInit {
 
+  Correo: string="";
+
   constructor(public alertCrtl: AlertController) { }
 
   ngOnInit() {
   }
 
-  async presentAlert(){
+  async enviarCorreo(){
+    if(!this.Correo || this.Correo.trim()===''){
+      const alert = await this.alertCrtl.create({
+        header: 'Error',
+        message: 'El campo de Correo electronico no puede estar vacio',
+        buttons: ['OK']
+      });
+    
+      await alert.present();
+
+      } else { 
+
     const alert = await this.alertCrtl.create({
       header: 'CORREO ENVIADO',
       message: 'Se ha enviado un codigo a su correo electronico',
@@ -24,6 +37,6 @@ export class RecuperarContrasenaPage implements OnInit {
     await alert.present();
   }
 
+ }
 }
-
 
