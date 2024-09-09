@@ -26,8 +26,7 @@ export class RecuperarContrasenaPage implements OnInit {
     
       await alert.present();
 
-      } else { 
-
+    } else { 
     const alert = await this.alertCrtl.create({
       header: 'CORREO ENVIADO',
       message: 'Se ha enviado un codigo a su correo electronico',
