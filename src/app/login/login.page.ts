@@ -9,13 +9,14 @@ import { NavigationExtras, Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
+      //se almacenan los valores del usuario
       login:any={
       usuario:"",
       password:""
   }
 
   field:string="";
-
+  //el toastcontroller funciona para mostrar mensajes al usuario y el router maneja navegacion
   constructor(public toastController: ToastController, private router:Router) { }
 
   ngOnInit() {
@@ -32,7 +33,7 @@ export class LoginPage implements OnInit {
           }
           this.router.navigate(['home'],navigationExtras);
         }else{
-          this.presentToast("La contraseña debe ser de largo 4 y solo numerica");
+          this.presentToast("La contraseña debe ser de minimo largo 4 caracteres");
           this.login.password="";
         }
       }else{
