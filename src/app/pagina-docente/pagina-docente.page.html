@@ -1,6 +1,9 @@
 <ion-header class="padding-header-docente">
   <ion-toolbar color="verde">
-    <ion-title class="ion-text-center">Bienvenido nombre_docente</ion-title>
+    <ion-buttons slot="start">  
+      <ion-back-button default-href="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Bienvenido {{usuario}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -18,8 +21,3 @@
   </ion-toolbar>
 </ion-footer>
 
-<ion-footer class="padding-footer-docente">
-  <ion-toolbar color="verde">
-    <ion-title class="ion-text-center">VIVO DUOC REMAKE</ion-title>
-  </ion-toolbar>
-</ion-footer>

@@ -1,26 +1,29 @@
-<ion-header padding class="docenteheader">
-  <ion-toolbar>
-    <ion-title class="ion-text-center">Bienvenido nombre_alumno</ion-title>
+<ion-header class="padding-header-alumno">
+  <ion-toolbar color="verde">
+    <ion-buttons slot="start">  
+      <ion-back-button default-href="alumno"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Bienvenido {{usuario}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ALUMNOSA</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-card-title>
-    <h1 class="ion-text-center">
-      Asistencia en linea
-    </h1>
-  </ion-card-title>
-
-  <ion-card color="danger">
-
-    <ion-button expand="block" color="danger" >Marcar Asistencia</ion-button>
+<ion-content [fullscreen]="true" color="rosado">
+  <ion-card color="amarillo" class="ion-card-asistencia">
+    <h1 class="ion-text-center">Asistencia en linea</h1>
+    <br>
+    <h5 class="texto-asistencia">Por reglamento académico tienes que tener un 70% de Asistencia en cada uno de tus ramos para
+      aprobar el curso, en esta sección podrás revisar el avance y así no repetir por no ir a
+      clases.</h5>
   </ion-card>
-
-
+  <ion-button expand="block" color="boton" class="botonAsistencia" routerLink="/camara-alumno">
+    Marcar Asistencia</ion-button>
+    <br>
+    <ion-button expand="block" color="boton" class="botonAsistencia" routerLink="/asistencia-registrada" (click)="goToAsistencia()">
+      Ver Asistencia</ion-button>
 </ion-content>
+
+<ion-footer class="padding-footer-alumno">
+  <ion-toolbar color="verde">
+    <ion-title class="ion-text-center">VIVO DUOC REMAKE</ion-title>
+  </ion-toolbar>
+</ion-footer>

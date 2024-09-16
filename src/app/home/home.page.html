@@ -1,20 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header class="padding-header-home">
+  <ion-toolbar color="verde">
+    <ion-popover trigger="popover-button" [dismissOnSelect]="true">
+      <ng-template>
+        <ion-content>
+          <ion-list>
+            <ion-item [routerLink]="['/login']" (click)="presentAlert()" [button]="true" [detail]="false">Cerrar Sesion</ion-item>
+          </ion-list>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
+    <ion-title class="ion-text-center">VIVO DUOC REMAKE</ion-title>
+
+      <ion-button color="rosado" slot="end" id="popover-button">
+        <ion-icon name="person-circle-sharp"></ion-icon>
+      </ion-button>   
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">SkeletonApp</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="rosado">
+  <ion-card color="amarillo">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Bienvenido {{usuario}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content class="ion-text-center">
+      Para ingresar como Docente, presione el boton de la izquierda.<br>
+      Para ingresar como Alumno, presione el boton de la derecha.
+    </ion-card-content>
+  
+    <ion-button (click)="goToPaginaD()" fill="clear">Docente</ion-button>
+    <ion-button (click)="goToAlumno()" fill="clear">Alumno</ion-button>
+  </ion-card>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
 </ion-content>
+
+<ion-footer class="padding-footer-home">
+  <ion-toolbar color="verde">
+    <ion-title class="ion-text-center">VIVO DUOC REMAKE</ion-title>
+  </ion-toolbar>
+</ion-footer>

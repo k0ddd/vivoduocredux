@@ -3,17 +3,21 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: '',
-    redirectTo: 'recuperar-contrasena',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
     path: 'pagina-docente',
@@ -30,14 +34,16 @@ const routes: Routes = [
   {
     path: 'asistencia-registrada',
     loadChildren: () => import('./asistencia-registrada/asistencia-registrada.module').then( m => m.AsistenciaRegistradaPageModule)
-  },  {
+  },
+  {
     path: 'codigoqr',
     loadChildren: () => import('./codigoqr/codigoqr.module').then( m => m.CodigoqrPageModule)
   },
   {
-    path: 'resumen-asistencia',
-    loadChildren: () => import('./resumen-asistencia/resumen-asistencia.module').then( m => m.ResumenAsistenciaPageModule)
+    path: 'camara-alumno',
+    loadChildren: () => import('./camara-alumno/camara-alumno.module').then( m => m.CamaraAlumnoPageModule)
   },
+  
 
 ];
 
