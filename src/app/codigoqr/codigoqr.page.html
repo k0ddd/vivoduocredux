@@ -1,16 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+<ion-header class="padding-header-qr">
+  <ion-toolbar color="verde">
+    <ion-buttons slot="start">  
+      <ion-back-button default-href=""></ion-back-button>
     </ion-buttons>
-    <ion-title>codigoqr</ion-title>
+    <ion-title class="ion-text-center">CODIGO QR</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">codigoqr</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="rosado">
+
+      <ion-card>
+        <img alt="AQUI VA EL QR" src="//api.qrcode-monkey.com/tmp/f9222487a5e9f61a47203b118608bac0.svg?1725056724091" />
+        <ion-card-header>
+          <ion-card-title class="ion-text-center">APUNTE LA CAMARA AL CODIGO QR</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+ 
 </ion-content>
+
+
+<ion-footer class="padding-footer-docente">
+  <ion-toolbar color="verde">
+    <ion-title class="ion-text-center">VIVO DUOC REMAKE</ion-title>
+  </ion-toolbar>
+</ion-footer>
